@@ -1,4 +1,5 @@
-import useInput from "./use-input";
+import useInput from "../use-input";
+import classes from "./Contacto.module.css";
 
 const Contacto = () => {
   const {
@@ -37,10 +38,10 @@ const Contacto = () => {
   } = useInput((value) => value.length >= 20 && value.length < 100);
 
   return (
-    <form className="form">
+    <form className={classes.form}>
       <h2>Contáctenos</h2>
 
-      <div className="input">
+      <div className={classes.input}>
         <label htmlFor="nombre">Nombre</label>
         <input
           type="text"
@@ -49,9 +50,11 @@ const Contacto = () => {
           onBlur={nameBlurHandler}
           value={enteredName}
         />
-        {nameInputHasError && <p className="error-text">Máximo 50. Mínimo 3</p>}
+        {nameInputHasError && (
+          <p className={classes["error-text"]}>Máximo 50. Mínimo 3</p>
+        )}
       </div>
-      <div className="input">
+      <div className={classes.input}>
         <label htmlFor="apellidos">Apellidos</label>
         <input
           type="text"
@@ -61,10 +64,10 @@ const Contacto = () => {
           value={enteredLastname}
         />
         {lastnameInputHasError && (
-          <p className="error-text">Máximo 50. Mínimo 3</p>
+          <p className={classes["error-text"]}>Máximo 50. Mínimo 3</p>
         )}
       </div>
-      <div className="input">
+      <div className={classes.input}>
         <label htmlFor="correo">Correo</label>
         <input
           type="text"
@@ -73,9 +76,11 @@ const Contacto = () => {
           onBlur={emailBlurHandler}
           value={enteredEmail}
         />
-        {emailInputHasError && <p className="error-text">debe incluir @</p>}
+        {emailInputHasError && (
+          <p className={classes["error-text"]}>debe incluir @</p>
+        )}
       </div>
-      <div className="input">
+      <div className={classes.input}>
         <label htmlFor="telefono">Teléfono</label>
         <input
           type="text"
@@ -85,10 +90,12 @@ const Contacto = () => {
           value={enteredPhone}
         />
         {phoneInputHasError && (
-          <p className="error-text">Máximo 8 Dígitos, Todos numéricos</p>
+          <p className={classes["error-text"]}>
+            Máximo 8 Dígitos, Todos numéricos
+          </p>
         )}
       </div>
-      <div className="asunto">
+      <div className={classes.asunto}>
         <label htmlFor="asunto">Asunto</label>
         <input
           type="text"
@@ -98,11 +105,11 @@ const Contacto = () => {
           value={enteredSubject}
         />
         {subjectInputHasError && (
-          <p className="error-text">Máximo 50. Mínimo 20</p>
+          <p className={classes["error-text"]}>Máximo 50. Mínimo 20</p>
         )}
       </div>
 
-      <div className="input">
+      <div className={classes.input}>
         <button>Enviar</button>
       </div>
     </form>

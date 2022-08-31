@@ -1,0 +1,91 @@
+.logo {
+  height: 2rem;
+}
+
+.hamburger {
+  height: 1.75rem;
+  display: none;
+}
+
+.header {
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  height: 7rem;
+  border-bottom: 1px solid #f5bbc7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-nav {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  text-transform: uppercase;
+}
+.navItem {
+  margin-left: 60px;
+  color: #77787b;
+  text-decoration: none;
+}
+
+.active {
+  margin-left: 60px;
+  color: #77787b;
+  text-decoration: none;
+  border-bottom: 3px solid #f5bbc7;
+}
+
+.nav-btn {
+  border: none;
+  font-size: inherit;
+  padding: 10px 15px;
+  display: inline-block;
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: #f5bbc7;
+  margin-left: 50px;
+  text-decoration: none;
+}
+
+.nav-btn:hover {
+  background-color: #77787b;
+}
+
+.btn:hover {
+  color: #77787b;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+@media only screen and (max-width: 33.2em) {
+  .navItem,
+  .active {
+    margin-left: 0px;
+    display: none;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .navItem {
+    margin-left: 1rem;
+  }
+
+  .active {
+    margin-left: 0px;
+    display: none;
+  }
+}

@@ -1,0 +1,59 @@
+.ganadores-container {
+  position: absolute;
+  background-color: #f5bbc7;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.ganadores-hero {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 5rem 0;
+}
+
+.ganadores-img {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+}
+
+.ganadores {
+  margin: 50rem 0 2rem;
+}
+
+.lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 7 0%;
+}
+
+.lista-item {
+  flex: 0 0 20%;
+  text-align: center;
+  margin: 0 4rem 2rem;
+  border-bottom: 1px solid #f5bbc7;
+  padding-bottom: 2rem;
+}
+
+.lista-item:last-child {
+  border-bottom: none;
+}
+
+.lista-item p {
+  margin: 5px 0;
+}
+
+.ganadores h1 {
+  text-align: center;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .lista-item {
+    flex: 0 0 100%;
+    margin: 0 4rem 2rem;
+  }
+}

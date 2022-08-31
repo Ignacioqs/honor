@@ -1,4 +1,5 @@
-import useInput from "./use-input";
+import useInput from "../use-input";
+import classes from "./Facturas.module.css";
 
 const Facturas = () => {
   const {
@@ -51,19 +52,17 @@ const Facturas = () => {
   } = useInput((value) => value.length >= 3 && value.length < 50);
 
   return (
-    <form className="form">
+    <form className={classes.form}>
       <h2>Activa tu factura</h2>
-      <div className="radio">
+      <div className={classes.radio}>
         <input type="radio" id="contactChoice1" name="contact" value="email" />
-        <label for="contactChoice1">Option 1</label>
+        <label htmlFor="contactChoice1">Option 1</label>
 
         <input type="radio" id="contactChoice2" name="contact" value="phone" />
-        <label for="contactChoice2">Option 2</label>
+        <label htmlFor="contactChoice2">Option 2</label>
       </div>
 
-      {/* /// */}
-
-      <div className="input">
+      <div className={classes.input}>
         <label htmlFor="id">Número de Identificación</label>
         <input
           type="text"
@@ -72,9 +71,11 @@ const Facturas = () => {
           onBlur={idBlurHandler}
           value={enteredId}
         />
-        {idInputHasError && <p className="error-text">Máximo 20. Mínimo 10</p>}
+        {idInputHasError && (
+          <p className={classes["error-text"]}>Máximo 20. Mínimo 10</p>
+        )}
       </div>
-      <div className="input">
+      <div className={classes.input}>
         <label htmlFor="nombre">Nombre</label>
         <input
           type="text"
@@ -83,9 +84,11 @@ const Facturas = () => {
           onBlur={nameBlurHandler}
           value={enteredName}
         />
-        {nameInputHasError && <p className="error-text">Máximo 50. Mínimo 3</p>}
+        {nameInputHasError && (
+          <p className={classes["error-text"]}>Máximo 50. Mínimo 3</p>
+        )}
       </div>
-      <div className="input">
+      <div className={classes.input}>
         <label htmlFor="apellido1">Apellido 1</label>
         <input
           type="text"
@@ -95,10 +98,10 @@ const Facturas = () => {
           value={enteredLastname}
         />
         {lastnameInputHasError && (
-          <p className="error-text">Máximo 50. Mínimo 3</p>
+          <p className={classes["error-text"]}>Máximo 50. Mínimo 3</p>
         )}
       </div>
-      <div className="input">
+      <div className={classes.input}>
         <label htmlFor="apellido2">Apellido 2</label>
         <input
           type="text"
@@ -108,10 +111,10 @@ const Facturas = () => {
           value={enteredLastname2}
         />
         {lastname2InputHasError && (
-          <p className="error-text">Máximo 50. Mínimo 3</p>
+          <p className={classes["error-text"]}>Máximo 50. Mínimo 3</p>
         )}
       </div>
-      <div className="input provincia">
+      <div className={`${classes.input} ${classes.provincia}`}>
         <label htmlFor="provincia">Provincia</label>
         <select name="provincia" id="provincia">
           <option value="">Escoger Provincia</option>
@@ -121,7 +124,7 @@ const Facturas = () => {
           <option value="cuatro">Cartago</option>
         </select>
       </div>
-      <div className="input">
+      <div className={classes.input}>
         <label htmlFor="correo">Correo</label>
         <input
           type="text"
@@ -130,13 +133,15 @@ const Facturas = () => {
           onBlur={emailBlurHandler}
           value={enteredEmail}
         />
-        {emailInputHasError && <p className="error-text">debe incluir @</p>}
+        {emailInputHasError && (
+          <p className={classes["error-text"]}>debe incluir @</p>
+        )}
       </div>
-      <div className="input">
+      <div className={classes.input}>
         <label htmlFor="fechaNacimiento">Fecha de Nacimiento</label>
         <input type="date" name="party" min="1900-01-01" max="2022-04-30" />
       </div>
-      <div className="input">
+      <div className={classes.input}>
         <label htmlFor="Numero">Numero de Teléfono</label>
         <input
           type="text"
@@ -146,10 +151,12 @@ const Facturas = () => {
           value={enteredPhone}
         />
         {phoneInputHasError && (
-          <p className="error-text">Máximo 8 Dígitos, Todos numéricos</p>
+          <p className={classes["error-text"]}>
+            Máximo 8 Dígitos, Todos numéricos
+          </p>
         )}
       </div>
-      <div className="input provincia">
+      <div className={`${classes.input} ${classes.provincia}`}>
         <label htmlFor="lugar">Lugar de Compra</label>
         <select name="lugar" id="lugar">
           <option value="">Escoger Provincia</option>
@@ -159,7 +166,7 @@ const Facturas = () => {
           <option value="cuatro">Cartago</option>
         </select>
       </div>
-      <div className="input">
+      <div className={classes.input}>
         <label htmlFor="numeroFactura">Numero de Factura</label>
         <input
           type="text"
@@ -169,10 +176,10 @@ const Facturas = () => {
           value={enteredInvoice}
         />
         {invoiceInputHasError && (
-          <p className="error-text">(Máximo 50. Mínimo 3)</p>
+          <p className={classes["error-text"]}>(Máximo 50. Mínimo 3)</p>
         )}
       </div>
-      <div className="input">
+      <div className={classes.input}>
         <button>Enviar</button>
       </div>
     </form>

@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9ce582b4.css",
+    "main.js": "/static/js/main.d9ef6619.js",
+    "static/media/hero2.png": "/static/media/hero2.520386b7bb41bb080068.png",
+    "static/media/hero1.png": "/static/media/hero1.c39076b8ede91681310f.png",
+    "static/media/hero3.png": "/static/media/hero3.34a68411284fafadcd49.png",
+    "static/media/h50.png": "/static/media/h50.fd790868187ba826ac37.png",
+    "static/media/x9.png": "/static/media/x9.201c02a716056bc53f6b.png",
+    "static/media/banda.png": "/static/media/banda.06dcdf542bf792766fbf.png",
+    "static/media/x8.png": "/static/media/x8.b293f78d10f207108df3.png",
+    "static/media/audifonos.png": "/static/media/audifonos.90910bfd1548d78eabcc.png",
+    "static/media/x7.png": "/static/media/x7.4052d86ce09cc6e0e7f9.png",
+    "static/media/logo.svg": "/static/media/logo.09e10a253e263ae95e849fcfd32aa044.svg",
+    "static/media/instagram.svg": "/static/media/instagram.e2cc0bb4128a3580a5ed4a1dd377a1fa.svg",
+    "static/media/twitter.svg": "/static/media/twitter.4f0a4862883ac667e44b3d404bfc989a.svg",
+    "index.html": "/index.html",
+    "static/media/facebook.svg": "/static/media/facebook.e7c3097f7bae419e93e6939e76a6287b.svg",
+    "static/media/hamburger.svg": "/static/media/hamburger.dc105da00f1557003aa5656c19f1eef7.svg",
+    "main.9ce582b4.css.map": "/static/css/main.9ce582b4.css.map",
+    "main.d9ef6619.js.map": "/static/js/main.d9ef6619.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9ce582b4.css",
+    "static/js/main.d9ef6619.js"
+  ]
+}
